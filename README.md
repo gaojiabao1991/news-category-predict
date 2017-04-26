@@ -9,20 +9,18 @@ A program just for fun.
 	
 ## 算法
 	
-1. 用训练数据生成词汇表
-2. 统计词汇表中每个词的df，训练数据每篇文档中每个词的tf(即生成词袋)
-3. 为训练数据每篇文档中的每个词计算tf-idf，公式如下：
-![](https://github.com/gaojiabao1991/github-images/blob/master/images/formula/tf-idf.png?raw=true)
-4. 对于一篇未知类别的测试用例，分别求它与4个已知分类下的每篇训练文档的相似度分数之和，取得分最大的分类作为预测分类。计算两篇文档相似度时，将文档看成一个多维向量，每个token对应一个维度，每个维度上的值是该token的tf-idf值；则两篇文档的相似度大小可以看成是两个向量夹角余弦值的大小。
-假设两篇文档对应的向量分别为a、b，则相似度为：
-![](https://github.com/gaojiabao1991/github-images/blob/master/images/formula/cos-similarity.png?raw=true)
-其中分子是a和b的点积，分母是a和b的欧式长度乘积。
-
-两个向量的内积a$\cdot$定义为：
-![](https://github.com/gaojiabao1991/github-images/blob/master/images/formula/doc-product.png?raw=true)
-
-欧式长度定义为：
-![](https://github.com/gaojiabao1991/github-images/blob/master/images/formula/Olen.png?raw=true)
+> * 用训练数据生成词汇表
+> * 统计词汇表中每个词的df，训练数据每篇文档中每个词的tf(即生成词袋)
+> * 为训练数据每篇文档中的每个词计算tf-idf，公式如下：<br>
+> ![](https://github.com/gaojiabao1991/github-images/blob/master/images/formula/tf-idf.png?raw=true)<br>
+> * 对于一篇未知类别的测试用例，分别求它与4个已知分类下的每篇训练文档的相似度分数之和，取得分最大的分类作为预测分类。计算两篇文档相似度时，将文档看< 成一个多维向量，每个token对应一个维度，每个维度上的值是该token的tf-idf值；则两篇文档的相似度大小可以看成是两个向量夹角余弦值的大小。
+> 假设两篇文档对应的向量分别为a、b，则相似度为：<br>
+> ![](https://github.com/gaojiabao1991/github-images/blob/master/images/formula/cos-similarity.png?raw=true)<br>
+> 其中分子是a和b的点积，分母是a和b的欧式长度乘积。
+> 两个向量的内积定义为：<br>
+> ![](https://github.com/gaojiabao1991/github-images/blob/master/images/formula/doc-product.png?raw=true)<br>
+> 欧式长度定义为：<br>
+> ![](https://github.com/gaojiabao1991/github-images/blob/master/images/formula/Olen.png?raw=true)<br>
 ## 测试结果
 
 	文章名称: [体育]狂砍61分纪念亲人!联盟一控大学经历让人敬佩.txt
